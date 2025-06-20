@@ -87,6 +87,7 @@ export default function RecognitionPage() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
       <h1 className="text-xl font-bold mb-6 text-gray-900">再認テスト</h1>
+      <p className="text-gray-700 mb-4">当てはまる単語を選択してください。</p>
       {currentQuestionIndex < questions.length ? (
         <div
           key={currentQuestionIndex}

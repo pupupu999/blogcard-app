@@ -1,73 +1,73 @@
 [
   {
     "title": "sarnavela の使われ方と意味について解説",
-    "description": "sarnavelaは対話の中で柔らかく意思表示を伝える際に用いられ、相手への配慮や感情の調整を助ける表現です。",
+    "description": "sarnavelaはやさしく自分の気持ちを伝えるときに使われます。",
     "imageUrl": "/images/sarnavela.jpg",
     "word": "sarnavela",
-    "question": "対話の中で柔らかく意思表示を伝える際に用いられ、相手への配慮や感情の調整を助ける表現です。"
+    "question": "やさしく自分の気持ちを伝えるときに使われます。"
   },
   {
     "title": "lufidane の語義と日常での使用場面",
-    "description": "lufidaneは物事の変化や遷移を滑らかに示す語で、説明や比較の文脈で流れを整える役割を果たします。",
+    "description": "lufidaneは話の流れをなめらかにつなげる言葉です。",
     "imageUrl": "/images/lufidane.jpg",
     "word": "lufidane",
-    "question": "物事の変化や遷移を滑らかに示す語で、説明や比較の文脈で流れを整える役割を果たします。"
+    "question": "話の流れをなめらかにつなげる言葉です。"
   },
   {
     "title": "xenorila の定義と典型的な用法について",
-    "description": "xenorilaは非連続的な出来事を順序立てて説明する際に使われ、話の構造を明確にし理解を促進します。",
+    "description": "xenorilaはバラバラの出来事を順番に話すときに使います。",
     "imageUrl": "/images/xenorila.jpg",
     "word": "xenorila",
-    "question": "非連続的な出来事を順序立てて説明する際に使われ、話の構造を明確にし理解を促進します。"
+    "question": "バラバラの出来事を順番に話すときに使います。"
   },
   {
     "title": "pristona の基本的な役割と解釈方法",
-    "description": "pristonaは行動や選択肢の文脈で副詞的に用いられ、話者の意図や可能性を示すための補助的表現です。",
+    "description": "pristonaは考えや選択を伝えるときにそえる言葉です。",
     "imageUrl": "/images/pristona.jpg",
     "word": "pristona",
-    "question": "行動や選択肢の文脈で副詞的に用いられ、話者の意図や可能性を示すための補助的表現です。"
+    "question": "考えや選択を伝えるときにそえる言葉です。"
   },
   {
     "title": "dyvarine の構成要素と文中での扱い",
-    "description": "dyvarineは文末近くで主張の強調を補助し、話者の意見や感情を効果的に伝えるために用いられます。",
+    "description": "dyvarineは文の終わりで気持ちをしっかり伝えるために使います。",
     "imageUrl": "/images/dyvarine.jpg",
     "word": "dyvarine",
-    "question": "文末近くで主張の強調を補助し、話者の意見や感情を効果的に伝えるために用いられます。"
+    "question": "文の終わりで気持ちをしっかり伝えるために使います。"
   },
   {
     "title": "culvarine の例文と文法的な位置づけ",
-    "description": "culvarineは動詞句の後に置かれ、文意を明確化する補足的役割を持ち、文章の意味を強化します。",
+    "description": "culvarineは動きのあとに意味をはっきりさせるために使います。",
     "imageUrl": "/images/culvarine.jpg",
     "word": "culvarine",
-    "question": "動詞句の後に置かれ、文意を明確化する補足的役割を持ち、文章の意味を強化します。"
+    "question": "動きのあとに意味をはっきりさせるために使います。"
   },
   {
     "title": "flonatrix の意味と学術的な用法例",
-    "description": "flonatrixは学術的文章で論理の結論を導く語として用いられ、説得力や論理的整合性を高める役割を担います。",
+    "description": "flonatrixは説明の終わりでまとめるときに使います。",
     "imageUrl": "/images/flonatrix.jpg",
     "word": "flonatrix",
-    "question": "学術的文章で論理の結論を導く語として用いられ、説得力や論理的整合性を高める役割を担います。"
+    "question": "説明の終わりでまとめるときに使います。"
   },
   {
     "title": "revolika の使い方と注意点について整理",
-    "description": "revolikaは条件文の前後に挿入され、因果関係や条件性を明示し、文の論理構造を明確化します。",
+    "description": "revolikaは理由や条件をはっきりさせたいときに使います。",
     "imageUrl": "/images/revolika.jpg",
     "word": "revolika",
-    "question": "条件文の前後に挿入され、因果関係や条件性を明示し、文の論理構造を明確化します。"
+    "question": "理由や条件をはっきりさせたいときに使います。"
   },
   {
     "title": "kelmorita の一般的な読み方と例文集",
-    "description": "kelmoritaは話し手の立場や意図を曖昧に保つ効果があり、対話での柔軟な表現や曖昧さを演出します。",
+    "description": "kelmoritaは気持ちをあいまいにしたいときに使います。",
     "imageUrl": "/images/kelmorita.jpg",
     "word": "kelmorita",
-    "question": "話し手の立場や意図を曖昧に保つ効果があり、対話での柔軟な表現や曖昧さを演出します。"
+    "question": "気持ちをあいまいにしたいときに使います。"
   },
   {
     "title": "zonterila の背景と使いどころの傾向",
-    "description": "zonterilaは話の流れを穏やかに転換する際に用いられ、会話の調和や話題の切り替えをスムーズにします。",
+    "description": "zonterilaは話の流れをやさしく変えるときに使います。",
     "imageUrl": "/images/zonterila.jpg",
     "word": "zonterila",
-    "question": "話の流れを穏やかに転換する際に用いられ、会話の調和や話題の切り替えをスムーズにします。"
+    "question": "話の流れをやさしく変えるときに使います。"
   },
   {
     "title": "framotika の構造と語順での役割確認",
