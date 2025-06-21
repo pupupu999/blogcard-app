@@ -23,58 +23,54 @@ const chunkTypes = [
 const fontSizes = ['9pt', '12pt']
 const imagePositions = ['left', 'right']
 
-// 組み合わせ作成
-let allCombinations: any[] = []
+// グループ単位でバランスよくカードを取得するロジック
+type Group = { chunkType: string, fontSize: string, imagePosition: string, data: any[] }
+
+const groups: Group[] = []
+
 chunkTypes.forEach(({ type, data }) => {
-  fontSizes.forEach((fontSize) => {
-    imagePositions.forEach((position) => {
-      allCombinations.push({ chunkType: type, data, fontSize, imagePosition: position })
+  fontSizes.forEach(fontSize => {
+    imagePositions.forEach(imagePosition => {
+      const enriched = data.map(card => ({
+        ...card,
+        chunkType: type,
+        fontSizeRaw: fontSize,
+        imagePositionRaw: imagePosition,
+      }))
+      groups.push({ chunkType: type, fontSize, imagePosition, data: enriched })
     })
   })
 })
 
-// 各組み合わせごとにランダムなカードを1つ選ぶ（重複を避ける）
 const usedTitles = new Set<string>()
-const selectedCards: any[] = []
+let selectedCards: any[] = []
 
-for (const { chunkType, data, fontSize, imagePosition } of allCombinations) {
-  const availableCards = data.filter((card: any) => !usedTitles.has(card.title))
-  if (availableCards.length === 0) continue
-  const randomCard = getRandomItems(availableCards, 1)[0]
-  usedTitles.add(randomCard.title)
+// 各グループから1枚ずつ（12枚）
+for (const group of groups) {
+  const candidates = group.data.filter(c => !usedTitles.has(c.title))
+  if (candidates.length === 0) continue
+  const chosen = getRandomItems(candidates, 1)[0]
+  usedTitles.add(chosen.title)
   selectedCards.push({
-    ...randomCard,
-    fontSize: fontSize === '9pt' ? 'text-9pt' : 'text-12pt',
-    fontSizeRaw: fontSize,
-    imagePosition,
-    imagePositionRaw: imagePosition,
-    chunkType,
+    ...chosen,
+    fontSize: chosen.fontSizeRaw === '9pt' ? 'text-9pt' : 'text-12pt',
+    imagePosition: chosen.imagePositionRaw,
   })
 }
 
-// 不足分を全カードから重複しないよう追加
-const allCards = [...cardChunk4, ...cardChunk7, ...cardChunk10]
-while (selectedCards.length < 16) {
-  const remaining = allCards.filter((card: any) => !usedTitles.has(card.title))
-  if (remaining.length === 0) break
-  const extraCard = getRandomItems(remaining, 1)[0]
-  usedTitles.add(extraCard.title)
+// 残り4枚を全体から偏りなく選ぶ
+const remainingPool = groups.flatMap(group =>
+  group.data.filter(c => !usedTitles.has(c.title)).map(card => ({
+    ...card,
+    fontSize: card.fontSizeRaw === '9pt' ? 'text-9pt' : 'text-12pt',
+    imagePosition: card.imagePositionRaw,
+  }))
+)
 
-  // Determine which chunk it came from
-  let chunkType = 'extra'
-  if (cardChunk4.includes(extraCard)) chunkType = '4'
-  else if (cardChunk7.includes(extraCard)) chunkType = '7'
-  else if (cardChunk10.includes(extraCard)) chunkType = '10'
-
-  selectedCards.push({
-    ...extraCard,
-    fontSize: Math.random() < 0.5 ? 'text-9pt' : 'text-12pt',
-    fontSizeRaw: Math.random() < 0.5 ? '9pt' : '12pt',
-    imagePosition: Math.random() < 0.5 ? 'left' : 'right',
-    imagePositionRaw: Math.random() < 0.5 ? 'left' : 'right',
-    chunkType,
-  })
-}
+const extras = getRandomItems(remainingPool, 4)
+extras.forEach(c => usedTitles.add(c.title))
+selectedCards = [...selectedCards, ...extras]
+console.log("Final selected cards:", selectedCards);
 
 console.log('selectedCards.length before slicing:', selectedCards.length)
 
